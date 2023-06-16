@@ -4,10 +4,6 @@ __pycache__/
 *$py.class
 
 /cache
-/output-collect_cities
-/output-plot
-/output-plot-subsamples
-/output-subsamples
 # C extensions
 *.so
 
