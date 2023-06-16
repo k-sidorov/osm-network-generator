@@ -61,7 +61,7 @@ def main(args):
     excluded_names = {x.lower() for x in args.exclude_cities}
     excluded_ids = collect_existing_ids(args.output_dir)
     countries = {x.lower() for x in args.country} if args.country is not None else None
-    with open(args.worldcities_file.name, newline='') as cities_file:
+    with open(args.worldcities_file.name, encoding="UTF-8", newline='') as cities_file:
         city_reader = csv.DictReader(cities_file)
         rows = [row for row in city_reader
                 if row['city'].lower() not in excluded_names and row['id'] not in excluded_ids and (countries is None or row['iso2'].lower() in countries)]
